@@ -32,7 +32,8 @@ const getPictures = function (page = 1, limit = 10) {
     showLoader();
     fetch(`https://picsum.photos/v2/list?page=${page};limit=${limit}`)
         .then(function (response) {return response.json()})
-        .then(function (result) {renderPictures(result)})
+        .then(function (result) {renderPictures(result)});
+    hideLoader();
 }
 
 /**
