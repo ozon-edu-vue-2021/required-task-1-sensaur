@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/loader.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./styles/loader.css"/>
+    <link rel="stylesheet" href="./styles/index.css"/>
     <title>Broken page</title>
-  </head>
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>-->
+</head>
 
-  <body>
-    <main class="main">
-      <div class="loader">
+<body>
+<main class="main">
+    <div class="loader">
         <div></div>
         <div></div>
         <div></div>
@@ -19,22 +20,24 @@
         <div></div>
         <div></div>
         <div></div>
-      </div>
-      <button class="action fetch" data-page="2">Загрузить картинки</button>
-      <section class="images content"></section>
-    </main>
-    <div class="popup">
-      <button class="action close"></button>
-      <div class="content"></div>
     </div>
+    <button class="action fetch" data-page="2">Загрузить картинки</button>
+    <section class="images content">
+<!--        <a id="image"> </a>-->
+    </section>
+</main>
+<div class="popup">
+    <div class="content"></div>
+    <button class="action close">x</button>
+</div>
 
-    <script defer src="./scripts/index.js"></script>
+<script defer src="./scripts/index.js"></script>
 
-    <template id="image">
-      <a class="link" href="" data-id="">
-        <img src="" width="250" alt="" />
-      </a>
-    </template>
+<template id="image">
+    <a class="link" href="" data-id="">
+        <img src="" width="250" alt=""/>
+    </a>
+</template>
 
     <template id="popup-image">
       <div>
@@ -50,5 +53,5 @@
         >
       </div>
     </template>
-  </body>
+</body>
 </html>
