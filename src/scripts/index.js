@@ -20,6 +20,7 @@ let loaderTimeout;
 const initialState = function() {
   action.disabled = false;
   getPictures();
+  // console.log(action)
 };
 
 /**
@@ -99,13 +100,14 @@ const renderPictures = function(list) {
   if (!list.length) {
     throw Error(`Pictures not defined. The list length: ${list.length}`);
   }
-
+  console.log(list)
   const clone = templateImageCard.content.cloneNode(true);
+  console.log("clone", clone)
   const fragment = document.createDocumentFragment();
 
   list.forEach(function(element) {
     const link = clone.querySelector("a");
-
+    console.log(element)
     link.href = element.url;
     link.dataset.id = element.id;
 
